@@ -23,6 +23,7 @@ router.post('/api/users/signup',[
     } 
 
     console.log('Creating a user...');
+    return res.status(200).send('success');
 });
-
+ 
 export { router as signupRouter};
