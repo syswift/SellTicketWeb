@@ -5,14 +5,16 @@ deploy:
     manifests:
       - ./infra/k8s/*.yaml
 build:
-  local:
-    push: false
+  #local:
+  #  push: false
+  googleCloudBuild:
+    projectId: groovy-groove-285311
   artifacts:
-    - image: syswift/auth
+    - image: us.gcr.io/groovy-groove-285311/auth
       context: auth
       docker:
         dockerfile: Dockerfile
       sync:
         manual:
           - src: 'src/**/*.ts'
-            dest: .
+            dest: . 

@@ -14,11 +14,7 @@ spec:
     spec:
       containers:
       - name: auth
-        image: syswift/auth
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        image: us.gcr.io/groovy-groove-285311/auth
 ---
 apiVersion: v1
 kind: Service
